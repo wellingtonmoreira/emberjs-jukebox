@@ -1,0 +1,11 @@
+ <div class="col-sm-3 col-md-2 sidebar">
+    <ul class="nav nav-sidebar">
+        {{#each items as |item|}}
+            <li>
+                {{#link-to item.route}}
+                    <a href="#">{{item.title}}</a>
+                {{/link-to}}
+            </li>
+        {{/each}}
+    </ul>
+</div>
