@@ -4,7 +4,7 @@ export default Ember.Component.extend({
 	actions: {
 		submit: function() {
 			var submitFn = this.get('submit');
-			if (submitFn) submitFn();
+			if (submitFn) { submitFn(); }
 		}
 	}
 });

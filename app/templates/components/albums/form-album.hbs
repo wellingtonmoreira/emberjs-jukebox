@@ -11,7 +11,12 @@
 		<label class="control-label" for="form-album-imageurl">Image URL</label>                 
 		<input type="text" class="form-control" id="form-album-imageurl" placeholder="Enter image URL"> 
 	</div>
-	{{form/form-action 
-		back=(action 'back')
-		submit=(action 'submit')}}
+	<div class="row">
+		<div class="col-md-6">
+			<button {{action 'back'}} type="submit" class="btn btn-danger">Back</button>
+		</div>
+		<div class="col-md-6 text-right">
+			<button {{action 'submit'}} type="submit" class="btn btn-info">Submit</button>
+		</div>
+	</div>
 </form>
