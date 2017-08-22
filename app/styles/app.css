@@ -7,6 +7,10 @@ body {
   padding-top: 50px;
 }
 
+.btn-custom {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
 /*
  * Global add-ons

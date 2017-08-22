@@ -1,0 +1,13 @@
+<form role="form" class="text-left"> 
+	<div class="form-group"> 
+		<label class="control-label" for="form-song-title">Title</label>                 
+		<input type="text" class="form-control" id="form-song-title" placeholder="Enter title"> 
+	</div>
+	<div class="form-group"> 
+		<label class="control-label" for="form-song-artistid">Album Id</label>                 
+		<input type="text" class="form-control" id="form-song-artistid" placeholder="Enter artist id"> 
+	</div>
+	{{form/form-action 
+		back=(action 'back')
+		submit=(action 'submit')}}
+</form>
