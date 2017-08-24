@@ -1,11 +1,19 @@
 <form role="form" class="text-left"> 
 	<div class="form-group"> 
 		<label class="control-label" for="form-song-title">Title</label>                 
-		<input type="text" class="form-control" id="form-song-title" placeholder="Enter title"> 
+		{{input type="text" class="form-control" id="form-song-title" placeholder="Enter title" value=(mut model.songTitle) }}
 	</div>
 	<div class="form-group"> 
 		<label class="control-label" for="form-song-artistid">Album Id</label>                 
-		<input type="text" class="form-control" id="form-song-artistid" placeholder="Enter artist id"> 
+		<select id="form-song-artistid" class="form-control" onchange={{action 'onSelectAlbum' value="target.value"}}>
+		  <option>Selecione</option>
+		  {{#each albums as |album|}}
+		    <option value={{album.id}}
+	    		selected={{eq album.id model.album.id}}>
+	    		{{album.albumName}}
+    		</option>
+		  {{/each}}
+		</select>
 	</div>
 	<div class="row">
 		<div class="col-md-6">

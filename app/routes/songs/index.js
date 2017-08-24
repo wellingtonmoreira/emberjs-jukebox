@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import AbstractModelAll from 'trainees-emberjs/routes/abstract/abstract-model-all';
 
-export default Ember.Route.extend({
+export default AbstractModelAll.extend({
 });

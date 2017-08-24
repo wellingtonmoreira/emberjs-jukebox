@@ -5,8 +5,15 @@ export default Ember.Controller.extend({
 		newSong: function() {
 			this.transitionToRoute('songs.new');
 		},
-		editSong: function() {
-			this.transitionToRoute('songs.edit', 123);
+		editSong: function(id) {
+			this.transitionToRoute('songs.edit', id);
+		},
+		deleteSong: function(id) {
+			this.get('store').find('song', id)
+				.then(function (song) {
+					song.deleteRecord();
+					song.save();
+				});
 		}
 	}
 });

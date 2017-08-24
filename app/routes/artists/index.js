@@ -1,7 +1,4 @@
-import Ember from 'ember';
+import AbstractModelAll from 'trainees-emberjs/routes/abstract/abstract-model-all';
 
-export default Ember.Route.extend({
-	model() {
-		return this.store.findAll('artist');
-	}
+export default AbstractModelAll.extend({
 });

@@ -1,14 +1,4 @@
-import AbstractForm from '../abstract-form';
+import AbstractForm from 'trainees-emberjs/controllers/abstract/abstract-form';
 
 export default AbstractForm.extend({
-	model: {},
-	actions: {
-		submit: function() {
-			let model = this.get('model');
-			this.get('store')
-				.createRecord('artist', model)
-				.save();
-			this._super();
-		}
-	}
 });
