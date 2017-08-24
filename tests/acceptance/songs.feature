@@ -1,0 +1,16 @@
+Feature: songs
+
+  Scenario: the one where I visit page '/songs'
+
+    Given I visit page "/songs"
+    Then I will be in page "/songs"
+
+  Scenario: the one where I visit page '/songs/new'
+
+    Given I visit page "/songs/new"
+    Then I will be in page "/songs/new"
+
+  Scenario: the one where I visit page '/songs/edit/1'
+
+    Given I visit page "/songs/edit/1"
+    Then I will be in page "/songs/edit/1"
