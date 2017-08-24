@@ -21,7 +21,7 @@ export default function() {
       return {
         album: album,
         artist: schema.artists.find(album.artist)
-      }
+      };
   });
 
   this.post('/albums');
@@ -41,7 +41,7 @@ export default function() {
       return {
         song: song,
         album: schema.albums.find(song.album)
-      }
+      };
   });
   this.post('/songs');
   this.put('/songs/:id');

@@ -4,8 +4,8 @@
 		{{input type="text" class="form-control" id="form-song-title" placeholder="Enter title" value=(mut model.songTitle) }}
 	</div>
 	<div class="form-group"> 
-		<label class="control-label" for="form-song-artistid">Album Id</label>                 
-		<select id="form-song-artistid" class="form-control" onchange={{action 'onSelectAlbum' value="target.value"}}>
+		<label class="control-label" for="form-song-albumid">Album Id</label>                 
+		<select id="form-song-albumid" class="form-control" onchange={{action 'onSelectAlbum' value="target.value"}}>
 		  <option>Selecione</option>
 		  {{#each albums as |album|}}
 		    <option value={{album.id}}
