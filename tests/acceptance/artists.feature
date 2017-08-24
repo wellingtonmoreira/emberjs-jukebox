@@ -26,3 +26,11 @@ Feature: artists
 
     Given I visit page "/artists/edit/1"
     
+  Scenario: the one where I create a new artist
+
+    Given I visit page "/artists"
+    And the element "table#grid-artists tbody tr" should appear "1" times
+    And I click on ".btn-new"
+    And I fill the field "#form-artist-name" with "Joe Satriani"
+    And I fill the field "#form-artist-imageurl" with "http://imgurl.co/satriani"
+    When I click on ".btn-submit"

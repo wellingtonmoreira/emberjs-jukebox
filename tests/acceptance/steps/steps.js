@@ -31,21 +31,31 @@ export default function(assert) {
       assert.ok(true, this.step);
       andThen(() => next());  
     })
-    .then('I will be in page "$uri"', function(uri, next) {
+    .define('I will be in page "$uri"', function(uri, next) {
       assert.equal(currentURL(), uri);
       next();
     })
-    .then('the element "$element" exists', function(element, next) {
+    .define('the element "$element" exists', function(element, next) {
       assert.equal(find(element).length, 1, 'Element must exist');
       next();
     })
-    .then('the element "$element" should appear "$n" times', function(element, n, next) {
+    .define('I click on "$element"', function(element, next) {
+      click(element)
+      assert.ok(true, this.step);
+      andThen(() => next());  
+    })
+    .define('the element "$element" should appear "$n" times', function(element, n, next) {
       assert.equal(find(element).length, n, 'Field appearances must be exact');
       next();
     })
-    .then('the field "$fieldId" is filled with "$value"', function(fieldId, value, next) {
+    .define('the field "$fieldId" is filled with "$value"', function(fieldId, value, next) {
       assert.equal(find(fieldId).length, 1, 'Field must exist');
       assert.equal(find(fieldId)[0].value, value, 'Value must be equal');
+      next();
+    })
+    .define('I fill the field "$fieldId" with "$value"', function(fieldId, value, next) {
+      fillIn(fieldId, value);
+      assert.ok(true, this.step);
       next();
     });
 }
