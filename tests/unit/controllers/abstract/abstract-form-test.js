@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('controller:abstract-form', 'Unit | Controller | abstract form', {
+moduleFor('controller:abstract/abstract-form', 'Unit | Controller | abstract form', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

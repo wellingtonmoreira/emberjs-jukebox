@@ -8,7 +8,7 @@ export default function() {
   this.put('/artists/:id');
   this.delete('/artists/:id');
 
-  this.get('/albums', (schema, request) => {
+  this.get('/albums', (schema) => {
     var albums = schema.albums.all();
     var artists = schema.artists.all();
     return {
@@ -22,7 +22,7 @@ export default function() {
   this.put('/albums/:id');
   this.delete('/albums/:id');
 
-  this.get('/songs', (schema, request) => {
+  this.get('/songs', (schema) => {
     var songs = schema.songs.all();
     var albums = schema.albums.all();
     return {
