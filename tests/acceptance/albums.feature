@@ -4,6 +4,7 @@ Feature: albums
 
     Given I visit page "/albums"
     Then I will be in page "/albums"
+    And the element ".btn-new" exists
     And the element "table#grid-albums tbody tr" should appear "1" times
 
   Scenario: the one where I visit page '/albums/new'
@@ -18,3 +19,5 @@ Feature: albums
     And the field "#form-album-name" is filled with "Gates of Fried Chicken of Hell"
     And the field "#form-album-artistid" is filled with "1"
     And the field "#form-album-imageurl" is filled with "http://image.massacration.com"
+    And the element ".btn-back" exists
+    And the element ".btn-submit" exists

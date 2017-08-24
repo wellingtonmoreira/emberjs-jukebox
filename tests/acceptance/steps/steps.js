@@ -1,3 +1,4 @@
+/* global server*/
 import yadda from '../../helpers/yadda';
 
 export default function(assert) {
@@ -35,7 +36,7 @@ export default function(assert) {
       next();
     })
     .then('the element "$element" exists', function(element, next) {
-      assert.equal(find(element).length, 1, 'Field must exist');
+      assert.equal(find(element).length, 1, 'Element must exist');
       next();
     })
     .then('the element "$element" should appear "$n" times', function(element, n, next) {
