@@ -1,7 +1,7 @@
 {
-  "name": "trainees-emberjs",
+  "name": "emberjs-jukebox",
   "version": "0.0.0",
-  "description": "Small description for trainees-emberjs goes here",
+  "description": "Small description for emberjs-jukebox goes here",
   "private": true,
   "directories": {
     "doc": "doc",

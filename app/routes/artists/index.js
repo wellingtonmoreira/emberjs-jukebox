@@ -1,4 +1,4 @@
-import AbstractModelAll from 'trainees-emberjs/routes/abstract/abstract-model-all';
+import AbstractModelAll from 'emberjs-jukebox/routes/abstract/abstract-model-all';
 
 export default AbstractModelAll.extend({
 });

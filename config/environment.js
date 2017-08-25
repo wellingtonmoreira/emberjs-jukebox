@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'trainees-emberjs',
+    modulePrefix: 'emberjs-jukebox',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',

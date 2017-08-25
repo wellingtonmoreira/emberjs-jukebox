@@ -1,4 +1,4 @@
-import AbstractModelEdit from 'trainees-emberjs/routes/abstract/abstract-model-edit';
+import AbstractModelEdit from 'emberjs-jukebox/routes/abstract/abstract-model-edit';
 
 export default AbstractModelEdit.extend({
 });

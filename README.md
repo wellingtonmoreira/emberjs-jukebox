@@ -1,7 +1,9 @@
-# Trainees-emberjs
+# Emberjs-jukebox
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Portfolio of EmberJS, containing:
+* Components
+* Acceptance Tests (Yadda)
+* Mirage
 
 ## Prerequisites
 
@@ -16,7 +18,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd trainees-emberjs`
+* `cd emberjs-jukebox`
 * `npm install`
 * `bower install`
 

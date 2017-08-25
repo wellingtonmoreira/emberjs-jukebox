@@ -1,4 +1,4 @@
-import AbstractForm from 'trainees-emberjs/controllers/abstract/abstract-form';
+import AbstractForm from 'emberjs-jukebox/controllers/abstract/abstract-form';
 
 export default AbstractForm.extend({
 });

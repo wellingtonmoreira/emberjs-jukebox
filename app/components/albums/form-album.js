@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import AbstractForm from 'trainees-emberjs/components/abstract/abstract-form';
+import AbstractForm from 'emberjs-jukebox/components/abstract/abstract-form';
 
 export default AbstractForm.extend({
 	relationshipUtils: Ember.inject.service(),
