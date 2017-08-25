@@ -40,7 +40,7 @@ export default function(assert) {
       next();
     })
     .define('I click on "$element"', function(element, next) {
-      click(element)
+      click(element);
       assert.ok(true, this.step);
       andThen(() => next());  
     })
@@ -51,6 +51,16 @@ export default function(assert) {
     .define('the field "$fieldId" is filled with "$value"', function(fieldId, value, next) {
       assert.equal(find(fieldId).length, 1, 'Field must exist');
       assert.equal(find(fieldId)[0].value, value, 'Value must be equal');
+      next();
+    })
+    .define('the element "$fieldId" contains text "$value"', function(fieldId, value, next) {
+      assert.equal(find(fieldId).length, 1, 'Field must exist');
+      assert.equal(find(fieldId)[0].textContent, value, 'Value must be equal');
+      next();
+    })
+    .define('the element "$fieldId" is empty', function(fieldId, next) {
+      assert.equal(find(fieldId).length, 1, 'Field must exist');
+      assert.equal(find(fieldId)[0].textContent, '', 'Value must be equal');
       next();
     })
     .define('I fill the field "$fieldId" with "$value"', function(fieldId, value, next) {

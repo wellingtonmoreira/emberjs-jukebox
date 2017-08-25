@@ -9,10 +9,9 @@ export default Ember.Controller.extend({
 			this.transitionToRoute('songs.edit', id);
 		},
 		deleteSong: function(id) {
-			this.get('store').find('song', id)
+			this.get('store').findRecord('song', id, { backgroundReload: false })
 				.then(function (song) {
-					song.deleteRecord();
-					song.save();
+					song.destroyRecord();
 				});
 		}
 	}

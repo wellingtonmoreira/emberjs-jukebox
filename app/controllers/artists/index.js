@@ -9,10 +9,9 @@ export default Ember.Controller.extend({
 			this.transitionToRoute('artists.edit', id);
 		},
 		deleteArtist: function(id) {
-			this.get('store').find('artist', id)
+			this.get('store').findRecord('artist', id, { backgroundReload: false })
 				.then(function (artist) {
-					artist.deleteRecord();
-					artist.save();
+					artist.destroyRecord();
 				});
 		}
 	}
